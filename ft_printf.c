@@ -7,18 +7,12 @@ int ft_check(va_list ag, char *str, int *len_count)
         ft_putchar(va_arg(ag, int), len_count);
     else if (*str == 's')
         ft_putstr(va_arg(ag, char *), len_count);
-    else if (*str == 'p')
-
     else if (*str == 'd')
         ft_putnbr(va_arg(ag, int), len_count);
     else if (*str == 'i')
         ft_putnbr(va_arg(ag, int), len_count);
-    else if (*str == 'u')
-
-    else if (*str == 'x')
-
-    else if (*str == 'X')
-
+    else if (*str == 'x' || *str == 'X')
+        ft_hexadecimal(va_arg(ag, int), *str, len_count);
     else if (*str == '%')
         ft_putchar(*str, len_count);
 }
