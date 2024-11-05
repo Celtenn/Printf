@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-void    ft_hexadecimal(int num, char f, int *len_count)
+void    ft_hexadecimal(unsigned int num, char f, int *len_count)
 {
     if (num >= 16)
     {
