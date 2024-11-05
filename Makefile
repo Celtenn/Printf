@@ -10,10 +10,12 @@ SRC = ft_printf.c \
 		ft_putchar.c \
 		ft_putnbr.c \
 		ft_putstr.c \
+		ft_hexadecimal.c \
+		ft_unsigned.c
 
-OBJS = $(SRC:.c=.o)
+OBJS=$(SRC:.c=.o)
 
-$(NAME): (OBJS)
+$(NAME): $(OBJS)
 		$(AR) $(NAME) $(OBJS)
 
 all: $(NAME)

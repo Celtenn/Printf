@@ -1,7 +1,7 @@
 #include "ft_printf.h"
 #include <stdarg.h>
 
-int ft_check(va_list ag, char *str, int *len_count)
+void ft_check(va_list ag, char *str, int *len_count)
 {
     if (*str == 'c')
         ft_putchar(va_arg(ag, int), len_count);
@@ -11,6 +11,8 @@ int ft_check(va_list ag, char *str, int *len_count)
         ft_putnbr(va_arg(ag, int), len_count);
     else if (*str == 'i')
         ft_putnbr(va_arg(ag, int), len_count);
+    else if (*str == 'u')
+        ft_unsigned(va_arg(ag, unsigned int), len_count);
     else if (*str == 'x' || *str == 'X')
         ft_hexadecimal(va_arg(ag, int), *str, len_count);
     else if (*str == '%')
