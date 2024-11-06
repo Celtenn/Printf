@@ -1,5 +1,4 @@
 #include "ft_printf.h"
-#include <stdarg.h>
 
 void ft_check(va_list ag, char *str, int *len_count)
 {
@@ -7,6 +6,8 @@ void ft_check(va_list ag, char *str, int *len_count)
         ft_putchar(va_arg(ag, int), len_count);
     else if (*str == 's')
         ft_putstr(va_arg(ag, char *), len_count);
+    else if (*str == 'p')
+        ft_addresshexa(va_arg(ag, unsigned long long), len_count);
     else if (*str == 'd')
         ft_putnbr(va_arg(ag, int), len_count);
     else if (*str == 'i')

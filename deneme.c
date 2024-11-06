@@ -2,9 +2,10 @@
 #include "ft_printf.h"
 int main()
 {
-    int p = ft_printf("%u %u %u\n", -12, -35, 0);
-    int i = printf("%u %u %u\n", -12, -35, 0);
+    char y[] = "merhaba";
+    int p = ft_printf("%p %x %u %s\n", y, -35, 0, "merhaba");
+    int i = printf("%p %x %u %s\n", y, -35, 0, "merhaba");
     printf("%d\n", p);
-    ft_printf("%d\n", i);
+    printf("%d\n", i);
 
 }
