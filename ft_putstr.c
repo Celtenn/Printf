@@ -3,7 +3,7 @@
 void ft_putstr(char *str, int *len_count)
 {
     if (!str)
-        return (0);
+        return ;
     while (*str)
     {
         ft_putchar(*str, len_count);
