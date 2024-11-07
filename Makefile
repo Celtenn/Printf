@@ -12,7 +12,7 @@ SRC = ft_printf.c \
 		ft_putstr.c \
 		ft_hexadecimal.c \
 		ft_unsigned.c \
-		ft_addhexa.c
+		ft_addresshexa.c
 
 OBJS=$(SRC:.c=.o)
 
