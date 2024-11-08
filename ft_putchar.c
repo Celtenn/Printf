@@ -1,7 +1,20 @@
-#include "ft_printf.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: idkahram <idkahram@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/08 11:50:56 by idkahram          #+#    #+#             */
+/*   Updated: 2024/11/08 11:52:15 by idkahram         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void    ft_putchar(char c, int *len_count)
+#include "ft_printf.h"
+#include <unistd.h>
+
+void	ft_putchar(char c, int *len_count)
 {
-    write(1, &c, 1);
-    (*len_count)++;
+	write(1, &c, 1);
+	(*len_count)++;
 }
