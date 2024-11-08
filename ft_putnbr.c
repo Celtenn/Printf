@@ -6,7 +6,7 @@
 /*   By: idkahram <idkahram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:52:54 by idkahram          #+#    #+#             */
-/*   Updated: 2024/11/08 14:24:05 by idkahram         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:28:11 by idkahram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_putnbr(long int nb, int *len_count)
 	if (nb < 0)
 	{
 		i = ft_putchar('-', len_count);
-		if  (i == -1)
+		if (i == -1)
 			return (-1);
 		ft_putnbr(-nb, len_count);
 	}
@@ -35,5 +35,5 @@ int	ft_putnbr(long int nb, int *len_count)
 		if (i == -1)
 			return (-1);
 	}
-	return (100);		
+	return (1);
 }

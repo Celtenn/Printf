@@ -6,7 +6,7 @@
 /*   By: idkahram <idkahram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:48:01 by idkahram          #+#    #+#             */
-/*   Updated: 2024/11/08 14:06:16 by idkahram         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:35:15 by idkahram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_check(va_list ag, char *str, int *len_count)
 	else if (*str == 's')
 		i = ft_putstr(va_arg(ag, char *), len_count);
 	else if (*str == 'p')
-		i = ft_addresshexa(va_arg(ag, unsigned long long), len_count);
+		i = ft_addresshexa(va_arg(ag, unsigned long int), len_count);
 	else if (*str == 'd')
 		i = ft_putnbr(va_arg(ag, int), len_count);
 	else if (*str == 'i')
@@ -31,7 +31,7 @@ int	ft_check(va_list ag, char *str, int *len_count)
 	else if (*str == 'u')
 		i = ft_unsigned(va_arg(ag, unsigned int), len_count);
 	else if (*str == 'x' || *str == 'X')
-		i = ft_hexadecimal(va_arg(ag, int), *str, len_count);
+		i = ft_hexadecimal(va_arg(ag, unsigned int), *str, len_count);
 	else if (*str == '%')
 		i = ft_putchar(*str, len_count);
 	return (i);

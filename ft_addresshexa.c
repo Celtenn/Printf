@@ -6,21 +6,21 @@
 /*   By: idkahram <idkahram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:45:24 by idkahram          #+#    #+#             */
-/*   Updated: 2024/11/08 14:27:10 by idkahram         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:22:35 by idkahram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_hexawr(unsigned long long num, int *len_count)
+int	ft_addressprint(unsigned long long num, int *len_count)
 {
 	int	i;
 
 	i = 0;
 	if (num >= 16)
 	{
-		ft_hexawr((num / 16), len_count);
-		ft_hexawr((num % 16), len_count);
+		ft_addressprint((num / 16), len_count);
+		ft_addressprint((num % 16), len_count);
 	}
 	else if (num < 10)
 	{
@@ -34,7 +34,7 @@ int	ft_hexawr(unsigned long long num, int *len_count)
 		if (i == -1)
 			return (-1);
 	}
-	return (100);
+	return (1);
 }
 
 int	ft_addresshexa(unsigned long long num, int *len_count)
@@ -48,8 +48,8 @@ int	ft_addresshexa(unsigned long long num, int *len_count)
 	i = ft_putchar('x', len_count);
 	if (i == -1)
 		return (-1);
-	i = ft_hexawr(num, len_count);
+	i = ft_addressprint(num, len_count);
 	if (i == -1)
 		return (-1);
-	return (100);
+	return (1);
 }

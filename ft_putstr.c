@@ -6,7 +6,7 @@
 /*   By: idkahram <idkahram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:53:33 by idkahram          #+#    #+#             */
-/*   Updated: 2024/11/08 14:25:30 by idkahram         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:24:53 by idkahram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_putstr(char *str, int *len_count)
 {
-	int	i;
+	int		i;
 	char	*strnull;
 
 	i = 0;
@@ -28,7 +28,7 @@ int	ft_putstr(char *str, int *len_count)
 				return (-1);
 			strnull++;
 		}
-		return (100);
+		return (1);
 	}
 	while (*str)
 	{
@@ -37,5 +37,5 @@ int	ft_putstr(char *str, int *len_count)
 			return (-1);
 		str++;
 	}
-	return (100);
+	return (1);
 }
