@@ -6,7 +6,7 @@
 /*   By: idkahram <idkahram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:52:54 by idkahram          #+#    #+#             */
-/*   Updated: 2024/11/08 19:28:11 by idkahram         ###   ########.fr       */
+/*   Updated: 2024/11/09 02:28:51 by idkahram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,26 @@
 
 int	ft_putnbr(long int nb, int *len_count)
 {
-	int	i;
+	int		i;
+	char	*nbr;
 
+	nbr = "0123456789";
 	i = 0;
 	if (nb < 0)
 	{
 		i = ft_putchar('-', len_count);
 		if (i == -1)
 			return (-1);
-		ft_putnbr(-nb, len_count);
+		nb = -nb;
 	}
-	else if (nb > 9)
+	if (nb > 9)
 	{
-		ft_putnbr((nb / 10), len_count);
-		ft_putnbr((nb % 10), len_count);
-	}
-	else
-	{
-		i = ft_putchar((nb + 48), len_count);
+		i = ft_putnbr((nb / 10), len_count);
 		if (i == -1)
 			return (-1);
 	}
+	i = ft_putchar(nbr[nb % 10], len_count);
+	if (i == -1)
+		return (-1);
 	return (1);
 }

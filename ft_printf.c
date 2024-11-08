@@ -6,7 +6,7 @@
 /*   By: idkahram <idkahram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:48:01 by idkahram          #+#    #+#             */
-/*   Updated: 2024/11/08 19:35:15 by idkahram         ###   ########.fr       */
+/*   Updated: 2024/11/09 02:28:06 by idkahram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	ft_printf(const char *str, ...)
 	if (!str)
 		return (0);
 	va_start(ag, str);
-	while (*str)
+	while (*str && i != -1)
 	{
 		if (*str == '%')
 		{

@@ -6,13 +6,13 @@
 /*   By: idkahram <idkahram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:45:24 by idkahram          #+#    #+#             */
-/*   Updated: 2024/11/08 19:22:35 by idkahram         ###   ########.fr       */
+/*   Updated: 2024/11/09 00:02:51 by idkahram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_addressprint(unsigned long long num, int *len_count)
+int	ft_addressprint(unsigned long int num, int *len_count)
 {
 	int	i;
 
@@ -37,7 +37,7 @@ int	ft_addressprint(unsigned long long num, int *len_count)
 	return (1);
 }
 
-int	ft_addresshexa(unsigned long long num, int *len_count)
+int	ft_addresshexa(unsigned long int num, int *len_count)
 {
 	int	i;
 
