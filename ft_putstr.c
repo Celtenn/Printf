@@ -6,29 +6,36 @@
 /*   By: idkahram <idkahram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:53:33 by idkahram          #+#    #+#             */
-/*   Updated: 2024/11/08 11:55:38 by idkahram         ###   ########.fr       */
+/*   Updated: 2024/11/08 14:25:30 by idkahram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putstr(char *str, int *len_count)
+int	ft_putstr(char *str, int *len_count)
 {
+	int	i;
 	char	*strnull;
 
+	i = 0;
 	strnull = "(null)";
 	if (!str)
 	{
 		while (*strnull)
 		{
-			ft_putchar(*strnull, len_count);
+			i = ft_putchar(*strnull, len_count);
+			if (i == -1)
+				return (-1);
 			strnull++;
 		}
-		return ;
+		return (100);
 	}
 	while (*str)
 	{
-		ft_putchar(*str, len_count);
+		i = ft_putchar(*str, len_count);
+		if (i == -1)
+			return (-1);
 		str++;
 	}
+	return (100);
 }

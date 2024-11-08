@@ -6,23 +6,22 @@
 /*   By: idkahram <idkahram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:52:54 by idkahram          #+#    #+#             */
-/*   Updated: 2024/11/08 11:53:20 by idkahram         ###   ########.fr       */
+/*   Updated: 2024/11/08 14:24:05 by idkahram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putnbr(int nb, int *len_count)
+int	ft_putnbr(long int nb, int *len_count)
 {
-	if (nb == -2147483648)
+	int	i;
+
+	i = 0;
+	if (nb < 0)
 	{
-		ft_putchar('-', len_count);
-		ft_putchar('2', len_count);
-		ft_putnbr(147483648, len_count);
-	}
-	else if (nb < 0)
-	{
-		ft_putchar('-', len_count);
+		i = ft_putchar('-', len_count);
+		if  (i == -1)
+			return (-1);
 		ft_putnbr(-nb, len_count);
 	}
 	else if (nb > 9)
@@ -31,5 +30,10 @@ void	ft_putnbr(int nb, int *len_count)
 		ft_putnbr((nb % 10), len_count);
 	}
 	else
-		ft_putchar((nb + 48), len_count);
+	{
+		i = ft_putchar((nb + 48), len_count);
+		if (i == -1)
+			return (-1);
+	}
+	return (100);		
 }
