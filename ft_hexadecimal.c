@@ -6,7 +6,7 @@
 /*   By: idkahram <idkahram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:47:11 by idkahram          #+#    #+#             */
-/*   Updated: 2024/11/08 14:26:09 by idkahram         ###   ########.fr       */
+/*   Updated: 2024/11/08 14:33:58 by idkahram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ int	ft_hexadecimal(unsigned int num, char f, int *len_count)
 		}
 		else
 			i = ft_putchar((num - 10 + 'A'), len_count);
+			if (i == -1)
+				return (-1);
 	}
 	return (100);
 }
