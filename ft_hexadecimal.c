@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_hexadecimal.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: idkahram <idkahram@student.42.fr>          +#+  +:+       +#+        */
+/*   By: idkahram <idkahram@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:47:11 by idkahram          #+#    #+#             */
-/*   Updated: 2024/11/08 19:20:24 by idkahram         ###   ########.fr       */
+/*   Updated: 2024/11/11 01:18:18 by idkahram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,12 @@ int	ft_hexadecimal(unsigned int num, char f, int *len_count)
 	i = 0;
 	if (num >= 16)
 	{
-		ft_hexadecimal((num / 16), f, len_count);
-		ft_hexadecimal((num % 16), f, len_count);
+		i = ft_hexadecimal((num / 16), f, len_count);
+		if (i == -1)
+			return (-1);
+		i = ft_hexadecimal((num % 16), f, len_count);
+		if (i == -1)
+			return (-1);
 	}
 	else
 	{

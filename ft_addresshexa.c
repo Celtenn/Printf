@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_addresshexa.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: idkahram <idkahram@student.42.fr>          +#+  +:+       +#+        */
+/*   By: idkahram <idkahram@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:45:24 by idkahram          #+#    #+#             */
-/*   Updated: 2024/11/09 00:02:51 by idkahram         ###   ########.fr       */
+/*   Updated: 2024/11/11 01:20:00 by idkahram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,10 @@ int	ft_addressprint(unsigned long int num, int *len_count)
 	i = 0;
 	if (num >= 16)
 	{
-		ft_addressprint((num / 16), len_count);
-		ft_addressprint((num % 16), len_count);
+		if (ft_addressprint((num / 16), len_count) == -1)
+			return (-1);
+		if (ft_addressprint((num % 16), len_count) == -1)
+			return (-1);
 	}
 	else if (num < 10)
 	{
