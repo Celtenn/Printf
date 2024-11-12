@@ -1,7 +1,14 @@
 #include <stdio.h>
-#include <stdint.h>
+#include "ft_printf.h"
 
-int main() {
-  printf("%d, %d, %d",sizeof(uint64_t), sizeof(uint_fast64_t));
-  return 0;
+int main()
+{
+    int i = 0;
+    int p = 0;
+    char nbr[] = "merhaba";
+
+    i = ft_printf("%c %s %p %d %i %u %x %X %%", 'a', nbr, nbr, 123, 123, 123, 123, 123);
+    p = printf("%c %s %p %d %i %u %x %X %%", 'a', nbr, nbr, 123, 123, 123, 123, 123);
+    printf("%d\n", i);
+    printf("%d", p);
 }
