@@ -6,7 +6,7 @@
 /*   By: idkahram <idkahram@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:45:24 by idkahram          #+#    #+#             */
-/*   Updated: 2024/11/11 01:20:00 by idkahram         ###   ########.fr       */
+/*   Updated: 2024/11/12 09:21:45 by idkahram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,20 @@ int	ft_addressprint(unsigned long int num, int *len_count)
 
 int	ft_addresshexa(unsigned long int num, int *len_count)
 {
-	int	i;
+	int		i;
+	char	*nll;
 
 	i = 0;
+	nll = "(nil)";
+	if (!num)
+	{
+		while (*nll)
+		{
+			ft_putchar(*nll, len_count);
+			nll++;
+		}
+		return (1);
+	}
 	i = ft_putchar('0', len_count);
 	if (i == -1)
 		return (-1);
